@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style2.css') }}">
+
+<body>
+    
+    <div class="background">
+        <h2 class="title"> Diabetes Prediction</h2>
+        <div class="diabetes">
+            
+            <form action="/outcome" method="POST" class="forms">
+                <label for="pregnancies">Pregnancies:</label> 
+                <input type="text" name="pregnancies"><br>
+                <label for="glucose">Glucose:</label>
+                <input type="text" name="glucose"><br>
+                <label for="blood_pressure">Blood Pressure:</label>
+                <input type="text" name="blood_pressure"><br>
+                <label for="skin_thickness">Skin Thickness:</label>
+                <input type="text" name="skin_thickness"><br>
+                <label for="insulin">Insulin</label>
+                <input type="text" name="insulin"><br>
+                <label for="bmi">BMI</label>
+                <input type="text" name="bmi"><br>
+                <label for="diabetes_pedigree_fun">Diabetes Pedigree Function</label>
+                <input type="text" name="diabetes_pedigree_fun"><br>
+                <label for="age">Age</label>
+                <input type="text" name="age"><br>
+                <input type="submit" value="Outcome"><br><br>
+                <b><span class="result">Result:{{result}} </b><br><br></span>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
